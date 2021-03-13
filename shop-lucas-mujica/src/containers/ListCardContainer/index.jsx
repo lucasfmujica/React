@@ -4,13 +4,9 @@ import Card from "../../components/Card";
 const ListCardContainer = () => {
   return (
     <div style={{ display: "flex" }}>
-      <Card title="Titulo 1" img="./img/robot.svg" paragraph="párrafo 1" />
+      <Card title="S21 Plus" img="./img/s21.jpg" paragraph="$178.000" />
 
-      <Card
-        title="Titulo 2"
-        img="./img/productividad.svg"
-        paragraph="párrafo 2"
-      />
+      <Card title="Macbook Air" img="./img/macbook.jpg" paragraph="$345.000" />
     </div>
   );
 };

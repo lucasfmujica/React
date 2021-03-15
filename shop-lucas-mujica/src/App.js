@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <ListCardContainer />
-      <ItemListContainer />
+      <ItemListContainer greeting="look here our catalog!" />
     </div>
   );
 }

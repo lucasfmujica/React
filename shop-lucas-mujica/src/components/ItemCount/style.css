@@ -1,0 +1,12 @@
+.btn-primary {
+  margin-top: 7px;
+  min-width: 40px;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.contador {
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}

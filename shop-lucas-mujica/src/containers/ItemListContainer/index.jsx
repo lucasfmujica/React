@@ -3,6 +3,7 @@ import "../../App.css";
 import { ItemCount } from "../../components/ItemCount";
 import ItemList from "../../components/ItemList";
 import productList from "../../mocks/productList";
+import "./loading.css";
 
 const ItemListContainer = (props) => {
   const [contador, setContador] = useState(1);
@@ -39,18 +40,18 @@ const ItemListContainer = (props) => {
   }, []);
 
   if (isLoading) {
-    return <h1>Cargando productos...</h1>
+    return <h2 className="loading">Cargando productos...</h2>
   }
 
   return (
     <>
+      <ItemList products={products} />
       <ItemCount
         stock={12}
         contador={contador}
         onSubstract={onSubstract}
         onAdd={onAdd}
       />
-      <ItemList products={products} />
     </>
   );
 };

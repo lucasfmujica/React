@@ -1,7 +1,7 @@
-.btn-primary {
+.btn-dark {
   margin-top: 7px;
   min-width: 40px;
-  padding: 10px;
+  padding: 8px;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -9,4 +9,13 @@
   font-size: 25px;
   justify-content: center;
   align-items: center;
+  position: relative;
+  top: 5px;
+}
+
+.contenedorbutton {
+  position: absolute;
+  margin: auto;
+  left: 0%;
+  right: 0%;
 }

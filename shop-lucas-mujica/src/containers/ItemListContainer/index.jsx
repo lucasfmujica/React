@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../App.css";
 import { ItemCount } from "../../components/ItemCount";
+import ItemList from "../../components/ItemList";
+import productList from "../../mocks/productList";
 
 const ItemListContainer = (props) => {
   const [contador, setContador] = useState(1);
@@ -21,6 +23,24 @@ const ItemListContainer = (props) => {
       alert("El valor es menor a lo que podemos vender");
     }
   };
+  const [products, setProducts] = React.useState([]);
+  const [isLoading, setIsLoading] = React.useState(false);
+
+  React.useEffect(() => {
+    setIsLoading(true);
+    const myPromise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve(productList), 2000);
+    });
+
+    myPromise.then((result) => {
+      setProducts(result);
+      setIsLoading(false);
+    });
+  }, []);
+
+  if (isLoading) {
+    return <h1>Cargando productos...</h1>
+  }
 
   return (
     <>
@@ -30,6 +50,7 @@ const ItemListContainer = (props) => {
         onSubstract={onSubstract}
         onAdd={onAdd}
       />
+      <ItemList products={products} />
     </>
   );
 };

@@ -23,6 +23,7 @@
 .card-img-top {
   transform: scale(1);
   transition: all 0.2s ease-in-out;
+  max-width: 100%;
 }
 
 .card-img-top:hover {

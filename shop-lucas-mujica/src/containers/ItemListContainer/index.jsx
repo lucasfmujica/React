@@ -40,7 +40,7 @@ const ItemListContainer = (props) => {
   }, []);
 
   if (isLoading) {
-    return <h2 className="loading">Cargando productos...</h2>
+    return <h2 className="loading">Cargando productos...</h2>;
   }
 
   return (

@@ -2,6 +2,7 @@
   text-align: center;
   font-family: "Lato";
   height: 100vh;
+  background: cover;
   background: rgb(238, 69, 64);
   background: linear-gradient(
     180deg,
@@ -11,6 +12,13 @@
     rgba(81, 10, 50, 1) 45%,
     rgba(45, 20, 44, 1) 100%
   );
+}
+
+:root {
+  --mainDark: #343a40;
+  --mainWhite: #fff;
+  --mainGrey: rgba(109, 109, 109);
+  --mainLightGrey: rgba(172, 172, 172);
 }
 
 .App-logo {

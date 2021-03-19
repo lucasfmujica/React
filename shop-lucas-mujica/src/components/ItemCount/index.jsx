@@ -3,7 +3,7 @@ import "./style.css";
 export const ItemCount = ({ stock, onAdd, contador, onSubstract }) => {
   return (
     <>
-      <div className="contenedorbutton">
+      <div className="container-fluid mb-5">
         <button
           className="btn btn-dark"
           onClick={onSubstract}

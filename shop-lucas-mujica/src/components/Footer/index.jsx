@@ -75,7 +75,7 @@ function Footer() {
           {/* Footer Bottom */}
           <div className="footer-bottom">
             <p className="text-xs-center">
-              &copy;{new Date().getFullYear()} City Guide App - All rights
+              &copy;{new Date().getFullYear()} Coral Byte - All rights
               reserved
             </p>
           </div>

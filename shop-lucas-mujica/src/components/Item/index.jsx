@@ -13,9 +13,9 @@ const Item = ({ product }) => {
       </div>
       <div className="card-body text-light">
         <h5 className="card-title">{product.name}</h5>
-        <div class="price text-success">
-          <h5 class="mt-3 text-secondary">Price: ${product.price}</h5>
-          <h5 class="mt-2 text-secondary">Stock: {product.stock}</h5>
+        <div className="price text-success">
+          <h5 className="mt-3 text-secondary">Price: ${product.price}</h5>
+          <h5 className="mt-2 text-secondary">Stock: {product.stock}</h5>
         </div>
       </div>
     </div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="500" version="1.1" viewBox="0 0 500.00001 500.00001" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <marker id="a" overflow="visible" orient="auto">
+   <path transform="scale(.4) translate(7.4 1)" d="m-2.5-1c0 2.76-2.24 5-5 5s-5-2.24-5-5 2.24-5 5-5 5 2.24 5 5z" fill="#fff" fill-rule="evenodd" stroke="#fff" stroke-opacity=".33981" stroke-width="1pt"/>
+  </marker>
+ </defs>
+ <g transform="translate(0 -552.36)">
+  <rect y="552.36" width="500" height="500" ry="0" fill="#00b2c6"/>
+ </g>
+ <g transform="translate(2.8182e-6 18.69)">
+  <g transform="matrix(1.1917 0 0 1.1917 -44.27 -48.871)">
+   <rect x="216.79" y="312.78" width="62.296" height="50.386" ry="0" fill="#c4c4c4"/>
+   <rect x="220.79" y="312.78" width="62.296" height="50.386" ry="0" fill="#d2d2d2"/>
+   <rect x="184.54" y="357.7" width="125.35" height="10.94" ry="5.4699" fill="#d2d2d2"/>
+   <rect x="189.99" y="357.7" width="125.35" height="10.94" ry="5.4699" fill="#f4f4f4"/>
+   <path d="m101.07 132.97c-3.1725 0-5.75 2.5775-5.75 5.75v170.31c0 3.1725 2.5775 5.75 5.75 5.75h281.75c3.1725 0 5.75-2.5775 5.75-5.75v-170.31c0-3.1725-2.5775-5.75-5.75-5.75z" color="#000000" color-rendering="auto" fill="#d2d2d2" image-rendering="auto" shape-rendering="auto" solid-color="#000000" style="block-progression:tb;isolation:auto;mix-blend-mode:normal;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-transform:none;white-space:normal"/>
+   <rect x="106.07" y="133.72" width="291.75" height="180.31" ry="5" fill="#2b2b2b" stroke="#f4f4f4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+   <path d="m112.21 139.87h279.45v168.02h-279.45z" fill="#ff4a4a"/>
+   <path d="m126.55 294.8 28.424-5.8406 19.079-26.478 36.991 16.354 33.876-11.292 25.309-30.371 29.203 20.248 17.911-50.229 36.212-10.903 22.165-40.884" fill="none" marker-end="url(#a)" marker-mid="url(#a)" marker-start="url(#a)" stroke="#fff" stroke-opacity=".33981" stroke-width="1px"/>
+   <path d="m391.67 139.87h-279.45v168.02z" fill="#fff" fill-opacity=".078431" fill-rule="evenodd"/>
+  </g>
+ </g>
+</svg>

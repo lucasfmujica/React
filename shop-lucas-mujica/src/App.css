@@ -1,58 +1,54 @@
-.App {
-  text-align: center;
-  font-family: "Lato";
-  height: 100vh;
-  background: cover;
-  background: rgb(238, 69, 64);
-  background: linear-gradient(
-    180deg,
-    rgba(238, 69, 64, 1) 0%,
-    rgba(199, 44, 65, 1) 15%,
-    rgba(128, 19, 54, 1) 30%,
-    rgba(81, 10, 50, 1) 45%,
-    rgba(45, 20, 44, 1) 100%
-  );
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        180deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(121, 54, 9, 1) 45%,
+        rgba(255, 149, 0, 1) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
 }
 
-:root {
-  --mainDark: #343a40;
-  --mainWhite: #fff;
-  --mainGrey: rgba(109, 109, 109);
-  --mainLightGrey: rgba(172, 172, 172);
+.App {
+    padding-top: 80px;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap");

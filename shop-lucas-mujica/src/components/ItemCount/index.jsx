@@ -1,38 +1,46 @@
+import { useState, useEffect } from "react";
 import "./style.css";
 
-export const ItemCount = ({ stock, onAdd, contador, onSubstract }) => {
-  return (
-    <>
-      <div className="container-fluid mb-5">
-        <button
-          className="btn btn-dark"
-          onClick={onSubstract}
-          disabled={contador === 1}
-        >
-          -
-        </button>
-        <b className="contador">{contador}</b>
-        <button
-          className="btn btn-dark"
-          onClick={() => {
-            onAdd(stock);
-          }}
-          disabled={contador === stock}
-        >
-          +
-        </button>
+export const ItemCount = ({ stock, value, onChange }) => {
+    const [contador, setContador] = useState(value);
 
-        <div>
-          <button
-            className="btn btn-dark"
-            onClick={() => {
-              console.log(contador);
-            }}
-          >
-            Agregar al carrito
-          </button>
-        </div>
-      </div>
-    </>
-  );
+    const onAdd = () => {
+        if (contador < stock) {
+            setContador(contador + 1);
+        } else {
+            alert("No tenemos mas stock!!!");
+        }
+    };
+
+    const onSubstract = (stock) => {
+        if (contador > 1) {
+            setContador(contador - 1);
+        } else {
+            alert("El valor es menor a lo que podemos vender");
+        }
+    };
+
+    useEffect(() => {
+        onChange(contador);
+    }, [contador, onChange]);
+
+    return (
+        <>
+            <button
+                className="btn btn-primary"
+                onClick={onSubstract}
+                disabled={contador === 1}>
+                -
+            </button>
+            <b className="contador">{contador}</b>
+            <button
+                className="btn btn-primary"
+                onClick={() => {
+                    onAdd();
+                }}
+                disabled={contador === stock}>
+                +
+            </button>
+        </>
+    );
 };

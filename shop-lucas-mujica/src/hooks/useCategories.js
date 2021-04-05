@@ -1,12 +1,13 @@
-import { useState, useEffect } from "react";
-import { getCategories } from "../mocks/productService";
+/* eslint-disable import/prefer-default-export */
+import {useState, useEffect} from 'react'
+import {getCategories} from '../mocks/productService'
 
 export function useCategories() {
-    const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([])
 
-    useEffect(() => {
-        setCategories(getCategories());
-    }, []);
+  useEffect(() => {
+    setCategories(getCategories())
+  }, [])
 
-    return { categories };
+  return {categories}
 }

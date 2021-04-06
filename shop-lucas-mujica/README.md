@@ -1,16 +1,39 @@
-### Proyecto realizado en ReactJS utilizando Create React App (https://github.com/facebook/create-react-app)
+<h1 align="center">Welcome to Coral Byte e-commerce 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-## Mi Proyecto:
+> e-commerce for electronic items, we have 6 products in inventory with a stock of 5 items each
 
-Este proyecto tiene la finalidad de ser usado como Ecommerce de productos electrónicos.
+## Install
 
-Funcionalidades terminadas:
+```sh
+npm install
+```
 
-Clasificar las categorías:
+## Usage
 
-- Computers
-- Phones
+```sh
+npm run start
+```
 
-Además vamos a elegir cada producto para ver sus detalles.
+## Run tests
 
-Finalmente subiremos nuestra compra al carrito.
+```sh
+npm run test
+```
+
+## Author
+
+👤 **Lucas Mujica**
+
+* Website: www.lucasmujica.com
+* Github: [@LukiMujica](https://github.com/LukiMujica)
+* LinkedIn: [@lucasfmujica](https://linkedin.com/in/lucasfmujica)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

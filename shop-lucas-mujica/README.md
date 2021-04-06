@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> e-commerce for electronic items, we have 6 products in inventory with a stock of 5 items each
+> E-commerce for electronic items, we have 6 products in inventory with a stock of 5 items each
 
 ## Install
 
@@ -36,4 +36,3 @@ npm run test
 Give a ⭐️ if this project helped you!
 
 ***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

@@ -1,7 +1,6 @@
 import React from 'react'
-import CartWidget from '../CartWidget'
-
 import {NavLink} from 'react-router-dom'
+import CartWidget from '../CartWidget'
 import {useCategories} from '../../hooks/useCategories'
 
 const Navbar = () => {
@@ -14,18 +13,16 @@ const Navbar = () => {
 
       <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
         <div className='navbar-nav'>
-          {categories.map((c) => {
-            return (
-              <NavLink
-                key={c}
-                to={`/Category/${c}`}
-                activeClassName='active'
-                className='nav-item nav-link'
-              >
-                {c}
-              </NavLink>
-            )
-          })}
+          {categories.map((c) => (
+            <NavLink
+              key={c}
+              to={`/Category/${c}`}
+              activeClassName='active'
+              className='nav-item nav-link'
+            >
+              {c}
+            </NavLink>
+          ))}
         </div>
       </div>
       <CartWidget />

@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
 import '../../App.css'
+import {useParams} from 'react-router-dom'
 import ItemList from '../../components/ItemList'
 import {getProducts} from '../../mocks/productService'
-import {useParams} from 'react-router-dom'
 import './loading.css'
 
 const ItemListContainer = () => {

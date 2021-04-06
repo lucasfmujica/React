@@ -1,7 +1,8 @@
+/* eslint-disable react/no-children-prop */
 import React from 'react'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
-import Navbar from './components/Navbar/'
+import Navbar from './components/Navbar'
 import ItemListContainer from './containers/ItemListContainer'
 import './App.css'
 import Footer from './components/Footer'

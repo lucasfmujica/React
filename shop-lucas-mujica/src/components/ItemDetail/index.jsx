@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
-import {AddToCart} from '../AddToCart/'
+import {AddToCart} from '../AddToCart'
 // import {Link} from "react-router-dom";
 import './itemDetail.css'
 
@@ -7,7 +8,7 @@ export default function ItemDetail({item}) {
   return (
     <div className='container d-flex justify-content-center align-items-center h-100'>
       <div className='row'>
-        <div className='card text-center bg-dark animate__animated animate__fadeInUp mt-2 p-2'>
+        <div className='p-2 mt-2 text-center card bg-dark animate__animated animate__fadeInUp'>
           <div className='overflow'>
             <img
               src={item?.pictureUrl}

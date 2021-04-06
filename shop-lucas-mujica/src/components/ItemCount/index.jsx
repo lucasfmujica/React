@@ -1,3 +1,8 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-shadow */
+/* eslint-disable import/no-duplicates */
+/* eslint-disable react/prop-types */
 /* eslint-disable import/prefer-default-export */
 import React from 'react'
 import {useState, useEffect} from 'react'

@@ -1,3 +1,5 @@
+/* eslint-disable react/button-has-type */
+/* eslint-disable react/prop-types */
 /* eslint-disable import/prefer-default-export */
 import React, {useState} from 'react'
 import {NavLink} from 'react-router-dom'
@@ -23,7 +25,7 @@ export function AddToCart({product}) {
         onChange={counterChangeHandler}
       />
       {!isAdded && (
-        <div className='card text-center bg-dark animate__animated animate__fadeInUp mt-2 p-2'>
+        <div className='p-2 mt-2 text-center card bg-dark animate__animated animate__fadeInUp'>
           <div className='overflow'>
             <button className='btn btn-success' onClick={addToCart}>
               Agregar al carrito
@@ -32,7 +34,7 @@ export function AddToCart({product}) {
         </div>
       )}
       {isAdded && (
-        <div className='card text-center bg-dark animate__animated animate__fadeInUp mt-2 p-2'>
+        <div className='p-2 mt-2 text-center card bg-dark animate__animated animate__fadeInUp'>
           <div className='overflow'>
             <NavLink to='/cart' className='navbar-brand'>
               <button className='btn btn-success'>Terminar mi compra</button>

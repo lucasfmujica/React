@@ -1,8 +1,9 @@
 {
-    "semi": false,
-    "singleQuote": true,
-    "jsxSingleQuote": true,
-    "trailingComma": "all",
-    "bracketSpacing": false,
-    "proseWrap": "always"
+  "semi": false,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": false,
+  "proseWrap": "always",
+  "parser": "babel"
 }

@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 export function getCategories() {
   const filteredCategories = productList
     .map((p) => p.category)

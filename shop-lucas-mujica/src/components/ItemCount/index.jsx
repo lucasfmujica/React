@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 /* eslint-disable react/button-has-type */
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-shadow */

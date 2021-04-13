@@ -13,7 +13,6 @@ export const CartProvider = ({children}) => {
   const addItem = (newItem, newQuantity) => {
     const {item = null, quantity = 0} =
       cart.find((e) => e.item.id === newItem.id) || {}
-    console.log(item, quantity)
 
     const newCart = cart.filter((e) => e.item.id !== newItem.id)
 

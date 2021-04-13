@@ -14,7 +14,6 @@ export function AddToCart({product}) {
   const {addItem, cart} = useCart()
 
   function addToCart() {
-    console.log('se agrego un item', counter)
     addItem(product, counter)
     setIsAdded(true)
   }

@@ -1,27 +1,33 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/prefer-default-export */
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import {NavLink} from 'react-router-dom'
 import {ItemCount} from '../ItemCount'
 import '../Item/card.css'
+import {CartProvider, useCart} from '../../context/CartContext'
 
 export function AddToCart({product}) {
-  const [contador, setContador] = useState(1)
+  const [counter, setCounter] = useState(1)
   const [isAdded, setIsAdded] = useState(false)
+  const {addItem, cart} = useCart()
+
   function addToCart() {
+    console.log('se agrego un item', counter)
+    addItem(product, counter)
     setIsAdded(true)
   }
 
   function counterChangeHandler(val) {
-    setContador(val)
+    setCounter(val)
   }
 
   return (
     <div>
       <ItemCount
         stock={product?.stock || 0}
-        value={contador}
+        value={counter}
         onChange={counterChangeHandler}
       />
       {!isAdded && (

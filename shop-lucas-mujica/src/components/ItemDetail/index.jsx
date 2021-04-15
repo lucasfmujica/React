@@ -6,7 +6,7 @@ import './itemDetail.css'
 
 export default function ItemDetail({item}) {
   return (
-    <div className='container d-flex justify-content-center align-items-center h-100'>
+    <div className='container d-flex justify-content-center align-items-center h-100 padding-container'>
       <div className='row'>
         <div className='p-2 mt-2 text-center card bg-dark animate__animated animate__fadeInUp'>
           <div className='overflow'>

@@ -8,8 +8,9 @@ li.active {
     border-bottom: 3px solid silver;
 }
 
-.container {
-  padding-top: 80px;
+.padding-container {
+  margin-top: 50px;
+  padding: 30px;
 }
 
 .item-photo {

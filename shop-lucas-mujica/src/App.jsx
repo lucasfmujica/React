@@ -6,7 +6,7 @@ import ItemListContainer from './containers/ItemListContainer'
 import './App.css'
 import Footer from './components/Footer'
 import {CartProvider} from './context/CartContext'
-
+import Hero from './components/HeroSection'
 import ItemDetailContainer from './containers/ItemDetailContainer'
 import {Cart} from './components/Cart/Cart'
 
@@ -18,6 +18,11 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path='/'>
+              <Hero
+                title='Coral Byte'
+                subTitle='Ecommerce de tecnologia'
+                text='Tenemos los mejores precios para vos!'
+              />
               <ItemListContainer />
             </Route>
             <Route exact path='/cart'>

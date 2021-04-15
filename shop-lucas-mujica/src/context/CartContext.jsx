@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 const CartContext = React.createContext([])
 
 export const CartProvider = ({children}) => {
-  const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'))
+  const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'), '[]')
   const [cart, setCart] = useState(cartFromLocalStorage)
   const [totalItems, setTotalItems] = useState(0)
   const [totalPrice, setTotalPrice] = useState(0)

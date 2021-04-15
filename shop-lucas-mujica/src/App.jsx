@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 import {CartProvider} from './context/CartContext'
 
 import ItemDetailContainer from './containers/ItemDetailContainer'
-import CartContainer from './containers/CartContainer'
+import {Cart} from './components/Cart/Cart'
 
 function App() {
   return (
@@ -21,7 +21,8 @@ function App() {
               <ItemListContainer />
             </Route>
             <Route exact path='/cart'>
-              <CartContainer />
+              <h2>Estoy en el Cart</h2>
+              <Cart />
             </Route>
             <Route path='/Category/:categoryId'>
               <ItemListContainer />

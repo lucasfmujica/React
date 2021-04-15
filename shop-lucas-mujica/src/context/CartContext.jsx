@@ -1,14 +1,35 @@
+/* eslint-disable arrow-body-style */
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/prefer-default-export */
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import PropTypes from 'prop-types'
 
 const CartContext = React.createContext([])
 
 export const CartProvider = ({children}) => {
   const [cart, setCart] = useState([])
+  const [totalItems, setTotalItems] = useState(0)
+  const [totalPrecio, setTotalPrecio] = useState(0)
+
+  useEffect(() => {
+    const precio = cart.reduce((acumulador, itemActual) => {
+      const p = itemActual.quantity * itemActual.item.price
+      return acumulador + p
+    }, 0)
+    const totItems = cart.reduce((accumulador, ItemActual) => {
+      return accumulador + ItemActual.quantity
+    }, 0)
+    // for (const cartItem of cart) {
+    //   totItems += cartItem.quantity
+    //   precio += cartItem.quantity * cartItem.item.price
+    // }
+
+    setTotalItems(totItems)
+    setTotalPrecio(precio)
+  }, [cart])
 
   const addItem = (newItem, newQuantity) => {
     const {item = null, quantity = 0} =
@@ -35,7 +56,17 @@ export const CartProvider = ({children}) => {
   }
 
   return (
-    <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart}}>
+    <CartContext.Provider
+      value={{
+        cart,
+        addItem,
+        removeItem,
+        clear,
+        isInCart,
+        totalItems,
+        totalPrecio,
+      }}
+    >
       {children}
     </CartContext.Provider>
   )

@@ -1,4 +1,4 @@
-.container {
+.cartContainer {
   min-height: 100vh;
   padding-top: 80px;
 }
@@ -7,6 +7,9 @@
   margin: 3px;
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  margin-top: 100px;
+  padding: 3px;
+  display: inline-block;
 }
 
 .title {

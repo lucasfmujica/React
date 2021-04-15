@@ -5,7 +5,7 @@ import Item from '../Item'
 import './styles.css'
 
 const ItemList = ({products = []}) => (
-  <div className='container-fluid d-flex justify-content-center align-items-center padding-container'>
+  <div className='container-fluid d-flex justify-content-center align-items-center c-container cc-10-cols'>
     <div className='row'>
       {products.map((product) => (
         <div className='col-sm' key={product.id}>

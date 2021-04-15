@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className='c-container cc-10-cols'>
       <div className='c-nav-wrapper mt-2'>
         <NavLink to='/' activeClassName='active' className='c-nav-brand'>
-          <div className='c-coralbyte-brand'>Coral-Byte</div>
+          <div className='c-coralbyte-brand'>Coral Byte</div>
         </NavLink>
         <nav className='c-nav-menu'>
           <div className='c-nav-links'>

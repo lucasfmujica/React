@@ -19,9 +19,8 @@ function App() {
           <Switch>
             <Route exact path='/'>
               <Hero
-                title='Coral Byte'
-                subTitle='Ecommerce de tecnologia'
-                text='Tenemos los mejores precios para vos!'
+                title='Adquirí el producto que necesitás'
+                subTitle='Vendemos los mejores celulares, notebooks, tablets y cualquier otro hardware que necesites.'
               />
               <ItemListContainer />
             </Route>
@@ -36,8 +35,8 @@ function App() {
             </Route>
             <Route path='*' children={<div>Not found</div>} />
           </Switch>
-          <Footer />
         </BrowserRouter>
+        <Footer />
       </CartProvider>
     </div>
   )

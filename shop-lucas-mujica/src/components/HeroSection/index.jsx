@@ -14,22 +14,21 @@ import './herosection.css'
 
 function Hero(props) {
   return (
-    <Jumbotron className='bg-transparent jumbotron-fluid p-0 font mt-5'>
-      <Container>
-        <Row className='justify-content-center py-5'>
-          <Col md={10} sm={12}>
-            {props.title && (
-              <h1 className='display-3 font-weight-bolder'>{props.title}</h1>
-            )}
-            {props.subTitle && (
-              <h2 className='display-4 font-weight-light'>{props.subTitle}</h2>
-            )}
-            {props.text && (
-              <h3 className='lead font-weight-light'>{props.text}</h3>
-            )}
-          </Col>
-        </Row>
-      </Container>
+    <Jumbotron className='bg-transparent jumbotron-fluid p-0'>
+      <div className='c-section cc-hero'>
+        <Container className='c-container cc-10-cols'>
+          <Row className='justify-content-center py-2'>
+            <Col>
+              {props.title && (
+                <h1 className='font font-weight-bolder'>{props.title}</h1>
+              )}
+              {props.subTitle && (
+                <h2 className='subTitleFont'>{props.subTitle}</h2>
+              )}
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </Jumbotron>
   )
 }

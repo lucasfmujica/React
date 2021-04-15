@@ -1,26 +1,42 @@
 .cartContainer {
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 .total{
   margin: 3px;
   font-family: 'Roboto', sans-serif;
-  color: #fff;
+  color: #000;
   margin-top: 100px;
   padding: 3px;
   display: inline-block;
 }
 
 .title {
-  color: #fff;
+  color: #000;
   font-family: 'Roboto', sans-serif;
   margin-top: 50px;
 }
 .quantity {
-  color: #fff;
+  color: #000;
   font-family: 'Roboto', sans-serif;
   padding: 3px;
   display: inline-block;
   margin-top: 20px;
+}
+.emptyCart{
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  padding: 3px;
+}
+.cartLink{
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  text-transform: none;
+  text-decoration: none;
+}
+.cartLink:hover{
+  color: #000;
+  text-transform: none;
+  text-decoration: none;
 }

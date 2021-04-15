@@ -1,0 +1,89 @@
+.c-container {
+  position: relative;
+  max-width:1348px;
+margin-right: auto;
+margin-left: auto;
+padding-right:24px;
+padding-left:24px;
+opacity: 1;
+font-family: 'Montserrat', sans-serif;
+color: #f30;
+font-size: 12px;
+}
+
+.c-container.cc-10-cols {
+  max-width:1124px
+}
+.c-nav-wrapper {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c-nav-brand {
+  position: relative;
+  display: block;
+  text-decoration: none;
+}
+
+.c-coralbyte-brand{
+  font-family: Georgia, "Times New Roman", serif;
+  color: #f30;
+  font-size:34px;
+  line-height: 56px;
+}
+
+.c-nav-menu {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c-nav-buttons{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 12px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c-nav-link {
+  padding:  28px 12px;
+  font-family: 'Montserrat', sans-serif;
+  color: #000;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+  white-space: normal;
+}
+.c-nav-brand:hover {
+  text-decoration: none;
+  text-transform: none;
+  color: #000;
+}
+.c-nav-link:hover {
+  text-decoration: none;
+  text-transform: none;
+  color: #000;
+}

@@ -18,8 +18,11 @@ export const Cart = () => {
   return (
     <div className='cartContainer'>
       {!cart.length ? (
-        <h2>
-          No hay items en el carrito <Link to='/'>Ir al home</Link>
+        <h2 className='emptyCart'>
+          No hay items en el carrito,{' '}
+          <Link to='/' className='cartLink'>
+            haz click aqui para volver a la home
+          </Link>
         </h2>
       ) : (
         <>
@@ -40,7 +43,8 @@ export const Cart = () => {
           ))}
           <div className='total'>
             <p>
-              Total: {totalItems} y ${totalPrecio}
+              La cantidad que llevás es: {totalItems} productos y el precio
+              total de tu compra es: ${totalPrecio}
             </p>
             <Button onClick={clear} variant='contained' color='primary'>
               Eliminar todos los items

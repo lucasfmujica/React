@@ -8,30 +8,32 @@ import './navbar.css'
 const Navbar = () => {
   const {categories} = useCategories()
   return (
-    <div className='c-container cc-10-cols'>
-      <div className='c-nav-wrapper mt-2'>
-        <NavLink to='/' activeClassName='active' className='c-nav-brand'>
-          <div className='c-coralbyte-brand'>Coral Byte</div>
-        </NavLink>
-        <nav className='c-nav-menu'>
-          <div className='c-nav-links'>
-            {categories.map((c) => (
-              <NavLink
-                key={c}
-                to={`/Category/${c}`}
-                activeClassName='active'
-                className='c-nav-link'
-              >
-                {c}
+    <div className='c-navbar'>
+      <div className='c-container cc-10-cols'>
+        <div className='c-nav-wrapper mt-2'>
+          <NavLink to='/' activeClassName='active' className='c-nav-brand'>
+            <div className='c-coralbyte-brand'>Coral Byte</div>
+          </NavLink>
+          <nav className='c-nav-menu'>
+            <div className='c-nav-links'>
+              {categories.map((c) => (
+                <NavLink
+                  key={c}
+                  to={`/Category/${c}`}
+                  activeClassName='active'
+                  className='c-nav-link'
+                >
+                  {c}
+                </NavLink>
+              ))}
+            </div>
+            <div className='c-nav-buttons'>
+              <NavLink to='/cart' className='nav-item nav-link'>
+                <CartWidget />
               </NavLink>
-            ))}
-          </div>
-          <div className='c-nav-buttons'>
-            <NavLink to='/cart' className='nav-item nav-link'>
-              <CartWidget />
-            </NavLink>
-          </div>
-        </nav>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
     // <nav className='navbar navbar-expand-lg navbar-dark bg-dark fixed-top'>

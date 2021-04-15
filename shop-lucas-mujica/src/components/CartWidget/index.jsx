@@ -7,11 +7,16 @@ const CartWidget = () => {
   return (
     <>
       {totalItems ? (
-        <img
-          style={{width: '30px'}}
-          src='/images/shopping-cart-solid.svg'
-          alt=''
-        />
+        <>
+          <img
+            style={{width: '30px'}}
+            src='/images/shopping-cart-solid.svg'
+            alt=''
+          />
+          <div className=' text-red-500 bg-gray-300 rounded-full ml-1 border-gray-300'>
+            {totalItems}
+          </div>
+        </>
       ) : null}
     </>
   )

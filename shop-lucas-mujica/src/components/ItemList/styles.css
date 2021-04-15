@@ -2,3 +2,7 @@
   justify-content: space-evenly;
   max-width: 1300px;
 }
+
+.container-fluid{
+  padding-top:80px
+}

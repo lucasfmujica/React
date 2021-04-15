@@ -13,15 +13,15 @@ export const CartProvider = ({children}) => {
   const cartFromLocalStorage = JSON.parse(localStorage.getItem('cart'))
   const [cart, setCart] = useState(cartFromLocalStorage)
   const [totalItems, setTotalItems] = useState(0)
-  const [totalPrecio, setTotalPrecio] = useState(0)
+  const [totalPrice, setTotalPrice] = useState(0)
 
   useEffect(() => {
-    const precio = cart.reduce((acumulador, itemActual) => {
-      const p = itemActual.quantity * itemActual.item.price
-      return acumulador + p
+    const price = cart.reduce((beforePrice, actualItem) => {
+      const p = actualItem.quantity * actualItem.item.price
+      return beforePrice + p
     }, 0)
-    const totItems = cart.reduce((accumulador, ItemActual) => {
-      return accumulador + ItemActual.quantity
+    const totItems = cart.reduce((beforeItems, ActualItem) => {
+      return beforeItems + ActualItem.quantity
     }, 0)
     // for (const cartItem of cart) {
     //   totItems += cartItem.quantity
@@ -30,7 +30,7 @@ export const CartProvider = ({children}) => {
     localStorage.setItem('cart', JSON.stringify(cart))
 
     setTotalItems(totItems)
-    setTotalPrecio(precio)
+    setTotalPrice(price)
   }, [cart])
 
   const addItem = (newItem, newQuantity) => {
@@ -66,7 +66,7 @@ export const CartProvider = ({children}) => {
         clear,
         isInCart,
         totalItems,
-        totalPrecio,
+        totalPrecio: totalPrice,
       }}
     >
       {children}

@@ -1,3 +1,6 @@
+/* eslint-disable no-undef */
+/* eslint-disable global-require */
+/* eslint-disable import/no-dynamic-require */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -5,13 +8,15 @@
 /* eslint-disable import/prefer-default-export */
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
+import './Cart.css'
+import Button from '@material-ui/core/Button'
 import {useCart} from '../../context/CartContext'
 
 export const Cart = () => {
   const {cart, removeItem, totalItems, totalPrecio, clear} = useCart()
 
   return (
-    <div>
+    <div className='container'>
       {!cart.length ? (
         <h2>
           No hay items en el carrito <Link to='/'>Ir al home</Link>
@@ -20,16 +25,24 @@ export const Cart = () => {
         <>
           {cart.map((cartItem) => (
             <div key={cartItem.item.id}>
-              <div>Titulo: {cartItem.item.name}</div>
-              <div>cantidad: {cartItem.quantity}</div>{' '}
-              <button onClick={() => removeItem(cartItem.item.id)}>
+              <h3 className='title'>Producto: {cartItem.item.name}</h3>
+              <p className='quantity'>Cantidad: {cartItem.quantity}</p>
+              <p className='quantity'>Precio: ${cartItem.item.price}</p>
+
+              <Button
+                onClick={() => removeItem(cartItem.item.id)}
+                variant='contained'
+                color='primary'
+              >
                 Borrar
-              </button>
+              </Button>
             </div>
           ))}
-          <div>
-            Total: {totalItems} y {totalPrecio}
-            <button onClick={clear}>Eliminar todos los items</button>
+          <div className='total'>
+            Total: {totalItems} y ${totalPrecio}
+            <Button onClick={clear} variant='contained' color='primary'>
+              Eliminar todos los items
+            </Button>
           </div>
         </>
       )}

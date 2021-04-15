@@ -21,7 +21,6 @@ function App() {
               <ItemListContainer />
             </Route>
             <Route exact path='/cart'>
-              <h2>Estoy en el Cart</h2>
               <Cart />
             </Route>
             <Route path='/Category/:categoryId'>

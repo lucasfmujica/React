@@ -1,0 +1,23 @@
+.container {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.total{
+  margin: 3px;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+.title {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 50px;
+}
+.quantity {
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  padding: 3px;
+  display: inline-block;
+  margin-top: 20px;
+}

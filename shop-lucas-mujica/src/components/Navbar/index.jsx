@@ -1,5 +1,5 @@
 import React from 'react'
-import {NavLink, Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import CartWidget from '../CartWidget'
 import {useCategories} from '../../hooks/useCategories'
 
@@ -25,9 +25,9 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      <Link to='/cart'>
-        <CartWidget />
-      </Link>
+      <NavLink to='/cart' className='nav-item nav-link'>
+        <CartWidget /> Mi Carrito
+      </NavLink>
 
       <button
         className='navbar-toggler'

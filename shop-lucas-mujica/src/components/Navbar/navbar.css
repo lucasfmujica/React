@@ -6,7 +6,7 @@ margin-left: auto;
 padding-right:24px;
 padding-left:24px;
 opacity: 1;
-font-family: 'Montserrat', sans-serif;
+font-family: 'Inter', sans-serif;
 color: #f30;
 font-size: 12px;
 }
@@ -37,9 +37,9 @@ font-size: 12px;
 
 .c-coralbyte-brand{
   font-family: 'Fira Sans', sans-serif;
-  color: #f30;
-  font-size:34px;
-  line-height: 56px;
+  color: #CB2D6F;
+  font-size:48px;
+  line-height: 70px;
 }
 
 .c-nav-menu {

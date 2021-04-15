@@ -6,7 +6,7 @@ import './styles.css'
 
 const ItemList = ({products = []}) => (
   <div className='container-fluid d-flex justify-content-center align-items-center c-container cc-10-cols'>
-    <div className='row'>
+    <div className='row cardFonts'>
       {products.map((product) => (
         <div className='col-sm' key={product.id}>
           <NavLink

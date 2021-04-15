@@ -1,9 +1,9 @@
 
 .font {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 74px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 80px;
   letter-spacing: 0em;
   text-align: left;
@@ -11,10 +11,10 @@
 
 }
 .subTitleFont{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
 font-size: 24px;
 font-style: normal;
-font-weight: 500;
+font-weight: 400;
 line-height: 38px;
 letter-spacing: 0em;
 text-align: left;

@@ -1,3 +1,4 @@
+/* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable no-undef */
 /* eslint-disable global-require */
 /* eslint-disable import/no-dynamic-require */
@@ -29,6 +30,11 @@ export const Cart = () => {
           {cart.map((cartItem) => (
             <div key={cartItem.item.id}>
               <h3 className='title'>Producto: {cartItem.item.name}</h3>
+              <img
+                alt=''
+                src={cartItem.item.pictureUrl}
+                style={{minHeight: '200px', maxHeight: '200px'}}
+              />
               <p className='quantity'>Cantidad: {cartItem.quantity}</p>
               <p className='quantity'>Precio: ${cartItem.item.price}</p>
 

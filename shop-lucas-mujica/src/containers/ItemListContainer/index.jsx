@@ -4,6 +4,7 @@ import '../../App.css'
 import {useParams} from 'react-router-dom'
 import ItemList from '../../components/ItemList'
 import {getProducts} from '../../mocks/productService'
+import {getFirestore} from '../../firebase'
 import './loading.css'
 
 const ItemListContainer = () => {
@@ -15,14 +16,19 @@ const ItemListContainer = () => {
   useEffect(() => {
     setIsLoading(true)
 
-    const myPromise = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(getProducts(categoryId))
-      }, 2000)
-    })
+    const db = getFirestore()
+    const itemCollection = db.collection('items')
+    const myPromise = itemCollection.get()
 
-    myPromise.then((result) => {
-      setProducts(result)
+    myPromise.then((snapshot) => {
+      console.log('se consultaron los datos')
+      console.log(snapshot)
+
+      if (snapshot.size > 0) {
+        console.log(snapshot.docs.map((doc) => doc.data()))
+        console.log(snapshot.docs.map((doc) => doc.id))
+        setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
+      }
       setIsLoading(false)
     })
   }, [categoryId])

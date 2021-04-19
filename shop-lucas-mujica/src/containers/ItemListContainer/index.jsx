@@ -18,8 +18,9 @@ const ItemListContainer = () => {
 
     const db = getFirestore()
     const itemCollection = db.collection('items')
-    const myPromise = itemCollection.get()
+    const filter = itemCollection.where('category', '==', categoryId)
 
+    const myPromise = filter.get()
     myPromise.then((snapshot) => {
       console.log('se consultaron los datos')
       console.log(snapshot)

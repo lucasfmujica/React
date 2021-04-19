@@ -22,7 +22,6 @@ function App() {
                 title='Adquirí el producto que necesitás'
                 subTitle='Vendemos los mejores celulares, notebooks, tablets y cualquier otro hardware que necesites.'
               />
-              <ItemListContainer />
             </Route>
             <Route exact path='/cart'>
               <Cart />

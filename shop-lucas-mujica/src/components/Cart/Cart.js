@@ -8,13 +8,40 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable import/prefer-default-export */
 import React, {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useHistory} from 'react-router-dom'
 import './Cart.css'
 import Button from '@material-ui/core/Button'
 import {useCart} from '../../context/CartContext'
+import {createOrder} from '../../services/ordersService'
 
 export const Cart = () => {
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
+  const history = useHistory()
+
   const {cart, removeItem, totalItems, totalPrecio, clear} = useCart()
+
+  const guardarOrden = (e) => {
+    e.preventDefault()
+    const buyer = {name, phone, email}
+
+    const items = cart.map((cartItem) => {
+      console.log(cartItem)
+      return {
+        id: cartItem.item.id,
+        title: cartItem.item.name,
+        price: cartItem.item.price,
+        quantity: cartItem.quantity,
+      }
+    })
+
+    const order = {buyers: buyer, items, total: totalPrecio}
+    createOrder(order).then((orderCreated) => {
+      clear()
+      history.push(`/orders/${ orderCreated.id}` )
+    })
+  }
 
   return (
     <div className='cartContainer'>
@@ -56,6 +83,24 @@ export const Cart = () => {
               Eliminar todos los items
             </Button>
           </div>
+          <form action='' onSubmit={guardarOrden}>
+            <input
+              type='text'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <input
+              type='text'
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+            />
+            <input
+              type='text'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <button type='submit'>Generar orden</button>
+          </form>
         </>
       )}
     </div>

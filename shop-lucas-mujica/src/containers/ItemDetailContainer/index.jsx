@@ -4,16 +4,7 @@
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom'
 import ItemDetail from '../../components/ItemDetail'
-import {getProduct} from '../../mocks/productService'
-import {getFirestore} from '../../firebase'
-
-const getItems = (id) => {
-  const db = getFirestore()
-  const itemCollection = db.collection('items')
-
-  const item = itemCollection.doc(id)
-  return item.get()
-}
+import {getProduct} from '../../services/productsService'
 
 export default function ItemDetailContainer() {
   const [isLoading, setIsLoading] = useState(false)
@@ -22,11 +13,8 @@ export default function ItemDetailContainer() {
 
   useEffect(() => {
     setIsLoading(true)
-    getItems(itemId).then((result) => {
-      console.log('existe?', result.exists)
-      if (result.exists) {
-        setItem(result.data())
-      }
+    getProduct(itemId).then((product) => {
+      setItem(product)
       setIsLoading(false)
     })
   }, [itemId])

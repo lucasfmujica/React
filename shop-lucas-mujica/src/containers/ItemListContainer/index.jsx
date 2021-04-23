@@ -1,10 +1,10 @@
+/* eslint-disable no-unused-expressions */
 /* eslint-disable no-unused-vars */
 import React, {useEffect, useState} from 'react'
 import '../../App.css'
 import {useParams} from 'react-router-dom'
 import ItemList from '../../components/ItemList'
-import {getProducts} from '../../mocks/productService'
-import {getFirestore} from '../../firebase'
+import {getProducts} from '../../services/productsService'
 import './loading.css'
 
 const ItemListContainer = () => {
@@ -15,21 +15,8 @@ const ItemListContainer = () => {
 
   useEffect(() => {
     setIsLoading(true)
-
-    const db = getFirestore()
-    const itemCollection = db.collection('items')
-    const filter = itemCollection.where('category', '==', categoryId)
-
-    const myPromise = filter.get()
-    myPromise.then((snapshot) => {
-      console.log('se consultaron los datos')
-      console.log(snapshot)
-
-      if (snapshot.size > 0) {
-        console.log(snapshot.docs.map((doc) => doc.data()))
-        console.log(snapshot.docs.map((doc) => doc.id))
-        setProducts(snapshot.docs.map((doc) => ({id: doc.id, ...doc.data()})))
-      }
+    getProducts(categoryId).then((productList) => {
+      setProducts(productList)
       setIsLoading(false)
     })
   }, [categoryId])

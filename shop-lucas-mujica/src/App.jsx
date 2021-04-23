@@ -9,6 +9,7 @@ import {CartProvider} from './context/CartContext'
 import Hero from './components/HeroSection'
 import ItemDetailContainer from './containers/ItemDetailContainer'
 import {Cart} from './components/Cart/Cart'
+import {Orders} from './components/Orders/Orders'
 
 function App() {
   return (
@@ -22,9 +23,16 @@ function App() {
                 title='Adquirí el producto que necesitás'
                 subTitle='Vendemos los mejores celulares, notebooks, tablets y cualquier otro hardware que necesites.'
               />
+              <ItemListContainer />
             </Route>
             <Route exact path='/cart'>
               <Cart />
+            </Route>
+            <Route exact path='/orders'>
+              <Orders />
+            </Route>
+            <Route exact path='/orders/:orderId'>
+              <Orders />
             </Route>
             <Route path='/Category/:categoryId'>
               <ItemListContainer />

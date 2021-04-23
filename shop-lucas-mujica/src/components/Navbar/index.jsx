@@ -26,6 +26,13 @@ const Navbar = () => {
                   {c}
                 </NavLink>
               ))}
+              <NavLink
+                to='/orders'
+                activeClassName='active'
+                className='c-nav-link'
+              >
+                Ordenes
+              </NavLink>
             </div>
             <div className='c-nav-buttons'>
               <NavLink to='/cart' className='nav-item nav-link'>

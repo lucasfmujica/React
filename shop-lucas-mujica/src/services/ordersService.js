@@ -30,9 +30,5 @@ export function getOrder(orderId) {
 export function createOrder(orderInfo) {
   const date = firebase.firestore.Timestamp.fromDate(new Date())
   const newOrder = {...orderInfo, date}
-  console.log(newOrder)
-  return ordersCollection.add(newOrder).then((orderCreated) => {
-    console.log(orderCreated.id)
-    return removeFromStocks({...orderInfo, id: orderCreated.id})
-  })
+  return ordersCollection.add(newOrder).then((orderCreated) => removeFromStocks({...orderInfo, id: orderCreated.id}))
 }

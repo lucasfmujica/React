@@ -41,14 +41,12 @@ export function getProduct(id) {
 
 export function removeFromStocks(order) {
   const batch = db.batch()
-  console.log(order)
   const itemsToUpdate = itemCollection.where(
     firebase.firestore.FieldPath.documentId(),
     'in',
     order.items.map((item) => item.id),
   )
   return itemsToUpdate.get().then((result) => {
-    console.log(result)
     for (const document of result.docs) {
       const actualStock = document.data().stock
       const itemOfOrder = order.items.find(

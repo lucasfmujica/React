@@ -26,20 +26,17 @@ export const Cart = () => {
     e.preventDefault()
     const buyer = {name, phone, email}
 
-    const items = cart.map((cartItem) => {
-      console.log(cartItem)
-      return {
-        id: cartItem.item.id,
-        title: cartItem.item.name,
-        price: cartItem.item.price,
-        quantity: cartItem.quantity,
-      }
-    })
+    const items = cart.map((cartItem) => ({
+      id: cartItem.item.id,
+      title: cartItem.item.name,
+      price: cartItem.item.price,
+      quantity: cartItem.quantity,
+    }))
 
     const order = {buyers: buyer, items, total: totalPrecio}
     createOrder(order).then((orderCreated) => {
       clear()
-      history.push(`/orders/${ orderCreated.id}` )
+      history.push(`/orders/${orderCreated.id}`)
     })
   }
 

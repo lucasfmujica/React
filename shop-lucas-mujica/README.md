@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> E-commerce for electronic items, we have 6 products in inventory with a stock of 5 items each
+> E-commerce for electronic items, we have 6 products in inventory with different stocks.
 
 ## Install
 
@@ -23,6 +23,7 @@ npm run start
 npm run test
 ```
 
+### 🏠 [Homepage](https://coralbyte.netlify.app/)
 ## Author
 
 👤 **Lucas Mujica**

@@ -70,7 +70,7 @@ export const Cart = () => {
                       <h3>{cartItem.item.name}</h3>
                     </div>
                     <div className='cart-quantity-contain'>
-                      <CartItemCount stock={cartItem.item.quantity} />
+                      <p className='quantity'>Cant: {cartItem.quantity}</p>
                     </div>
                     <p className='quantity'>Precio: ${cartItem.item.price}</p>
 

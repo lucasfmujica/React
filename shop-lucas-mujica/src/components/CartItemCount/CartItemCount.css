@@ -1,0 +1,26 @@
+.c-cartitem-count-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 75px;
+}
+.c-cartitem-count-container button{
+  width: 20px;
+  border-radius: 5px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: hidden;
+}
+.c-cartitem-count-container button:disabled{
+      cursor: default;
+  }

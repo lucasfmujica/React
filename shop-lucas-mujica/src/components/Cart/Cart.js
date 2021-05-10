@@ -13,14 +13,19 @@ import './Cart.css'
 import Button from '@material-ui/core/Button'
 import {useCart} from '../../context/CartContext'
 import {createOrder} from '../../services/ordersService'
+import {ItemCount} from '../ItemCount'
+import {CartItemCount} from '../CartItemCount'
 
 export const Cart = () => {
   const [name, setName] = useState('')
+  const [lastName, setLastName] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
+  const [email2, setEmail2] = useState('')
+
   const history = useHistory()
 
-  const {cart, removeItem, totalItems, totalPrecio, clear} = useCart()
+  const {cart, removeItem, totalItems, totalPrecio, clear, addItem} = useCart()
 
   const guardarOrden = (e) => {
     e.preventDefault()
@@ -46,29 +51,39 @@ export const Cart = () => {
         <h2 className='emptyCart'>
           No hay items en el carrito,{' '}
           <Link to='/' className='cartLink'>
-            haz click aqui para volver a la home
+            haz click aqui para volver al inicio
           </Link>
         </h2>
       ) : (
         <>
           {cart.map((cartItem) => (
-            <div key={cartItem.item.id}>
-              <h3 className='title'>Producto: {cartItem.item.name}</h3>
-              <img
-                alt=''
-                src={cartItem.item.pictureUrl}
-                style={{minHeight: '200px', maxHeight: '200px'}}
-              />
-              <p className='quantity'>Cantidad: {cartItem.quantity}</p>
-              <p className='quantity'>Precio: ${cartItem.item.price}</p>
+            <div className='c-section cc-cart'>
+              <div className='c-container cc-10-cols'>
+                <div key={cartItem.item.id} className='c-cart-item'>
+                  <div className='c-cart-img-container'>
+                    <div className='c-cartitem-img'>
+                      <img alt='' src={cartItem.item.pictureUrl} />
+                    </div>
+                  </div>
+                  <div className='c-cartitem-info-container'>
+                    <div className='c-cartitem-title'>
+                      <h3>{cartItem.item.name}</h3>
+                    </div>
+                    <div className='cart-quantity-contain'>
+                      <CartItemCount stock={cartItem.item.quantity} />
+                    </div>
+                    <p className='quantity'>Precio: ${cartItem.item.price}</p>
 
-              <Button
-                onClick={() => removeItem(cartItem.item.id)}
-                variant='contained'
-                color='primary'
-              >
-                Borrar
-              </Button>
+                    <Button
+                      onClick={() => removeItem(cartItem.item.id)}
+                      variant='contained'
+                      color='primary'
+                    >
+                      Borrar
+                    </Button>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
           <div className='total'>
@@ -83,20 +98,55 @@ export const Cart = () => {
           <form action='' onSubmit={guardarOrden}>
             <input
               type='text'
+              placeholder='Name'
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
+            <br />
             <input
               type='text'
+              placeholder='Last Name'
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+            <br />
+            <input
+              type='number'
+              placeholder='Phone'
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
+            <br />
             <input
               type='text'
+              placeholder='Email'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type='submit'>Generar orden</button>
+            <br />
+            <input
+              type='text'
+              placeholder='Reitere su Email'
+              value={email2}
+              onChange={(e) => setEmail2(e.target.value)}
+            />
+            <Button
+              variant='contained'
+              color='primary'
+              type='submit'
+              disabled={
+                !!(
+                  !name ||
+                  !lastName ||
+                  !phone ||
+                  !email ||
+                  !email2 ||
+                  !(email === email2)
+                )
+              }
+            >
+              Generar orden
+            </Button>
           </form>
         </>
       )}

@@ -2,6 +2,7 @@
 import React, {useEffect, useState} from 'react'
 import './orders.css'
 import {useParams, Link} from 'react-router-dom'
+import Button from '@material-ui/core/Button'
 import {getOrders} from '../../services/ordersService'
 
 export function Orders() {
@@ -38,6 +39,11 @@ export function Orders() {
         )}
         {orderId && <code>{JSON.stringify(currentOrder)}</code>}
       </div>
+      <Link to='/orders'>
+        <Button variant='contained' color='primary'>
+          Ver numero de orden
+        </Button>
+      </Link>
     </>
   )
 }

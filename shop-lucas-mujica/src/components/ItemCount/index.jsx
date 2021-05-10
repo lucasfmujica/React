@@ -15,16 +15,12 @@ export const ItemCount = ({stock, value, onChange}) => {
   const onAdd = () => {
     if (contador < stock) {
       setContador(contador + 1)
-    } else {
-      alert('No tenemos mas stock!!!')
     }
   }
 
   const onSubstract = (stock) => {
     if (contador > 1) {
       setContador(contador - 1)
-    } else {
-      alert('El valor es menor a lo que podemos vender')
     }
   }
 
